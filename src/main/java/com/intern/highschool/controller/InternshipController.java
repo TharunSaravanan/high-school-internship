@@ -5,9 +5,7 @@
  */
 package com.intern.highschool.controller;
 
-import com.intern.highschool.model.Internship;
 import com.intern.highschool.model.Listing;
-import com.intern.highschool.repository.InternshipRepository;
 import com.intern.highschool.repository.ListingRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

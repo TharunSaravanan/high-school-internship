@@ -5,7 +5,6 @@
  */
 package com.intern.highschool.repository;
 
-import com.intern.highschool.model.Internship;
 import com.intern.highschool.model.Listing;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
