@@ -6,7 +6,9 @@
 package com.intern.highschool.controller;
 
 import com.intern.highschool.model.Internship;
+import com.intern.highschool.model.Listing;
 import com.intern.highschool.repository.InternshipRepository;
+import com.intern.highschool.repository.ListingRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -23,11 +25,12 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class InternshipController {
     @Autowired
-    private InternshipRepository repository;
+    private ListingRepository listingRepository;
+    
     
     @GetMapping("/getAll")
-    public List<Internship> getAllInternships() {
-        List<Internship> result = repository.findAll();
+    public List<Listing> getAllListings() {
+        List<Listing> result = listingRepository.findAll();
         return result;
     }
 }

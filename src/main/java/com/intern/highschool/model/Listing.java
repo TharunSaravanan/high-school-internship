@@ -17,7 +17,8 @@ import javax.persistence.Id;
  * @author Tharun Saravanan
  */
 @Entity
-public class Internship {
+public class Listing {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -27,13 +28,17 @@ public class Internship {
     private String city;
     private String state;
     private String countryCode;
-    private String type;
+    private String qualification;
+    private String period;
     private LocalDate postedDate;
-    private LocalDate dueDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private String deadline; 
     private String jobUrl;
-
-    public Internship() {
-    }
+    private String companyUrl;
+    private String companyLogoUrl;
+    private String pay;
+    private String industry;
 
     public int getId() {
         return id;
@@ -61,10 +66,6 @@ public class Internship {
 
     public String getDescription() {
         return description;
-    }
-    
-    public String getShortDescription(){
-        return description.substring(0, 250) + "...";
     }
 
     public void setDescription(String description) {
@@ -95,12 +96,20 @@ public class Internship {
         this.countryCode = countryCode;
     }
 
-    public String getType() {
-        return type;
+    public String getQualification() {
+        return qualification;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
+    }
+
+    public String getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(String period) {
+        this.period = period;
     }
 
     public LocalDate getPostedDate() {
@@ -111,12 +120,28 @@ public class Internship {
         this.postedDate = postedDate;
     }
 
-    public LocalDate getDueDate() {
-        return dueDate;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate = dueDate;
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
+
+    public String getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(String deadline) {
+        this.deadline = deadline;
     }
 
     public String getJobUrl() {
@@ -126,6 +151,39 @@ public class Internship {
     public void setJobUrl(String jobUrl) {
         this.jobUrl = jobUrl;
     }
-    
-    
+
+    public String getCompanyUrl() {
+        return companyUrl;
+    }
+
+    public void setCompanyUrl(String companyUrl) {
+        this.companyUrl = companyUrl;
+    }
+
+    public String getCompanyLogoUrl() {
+        return companyLogoUrl;
+    }
+
+    public void setCompanyLogoUrl(String companyLogoUrl) {
+        this.companyLogoUrl = companyLogoUrl;
+    }
+
+    public String getPay() {
+        return pay;
+    }
+
+    public void setPay(String pay) {
+        this.pay = pay;
+    }
+
+    public String getIndustry() {
+        return industry;
+    }
+
+    public void setIndustry(String industry) {
+        this.industry = industry;
+    }
+
+    public Listing() {
+    }
 }

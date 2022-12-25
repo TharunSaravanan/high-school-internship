@@ -6,6 +6,7 @@
 package com.intern.highschool.repository;
 
 import com.intern.highschool.model.Internship;
+import com.intern.highschool.model.Listing;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +15,6 @@ import org.springframework.stereotype.Repository;
  * @author Tharun Saravanan
  */
 @Repository
-public interface InternshipRepository extends JpaRepository<Internship, Integer> {
+public interface ListingRepository extends JpaRepository<Listing, Integer> {
     
 }
